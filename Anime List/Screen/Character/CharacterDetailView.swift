@@ -36,7 +36,11 @@ struct CharacterDetailView: View {
                 } else {
                     if(characterData != nil) {
                         VStack (spacing: 20) {
-                            AsyncImage(url: URL(string: characterData!.images.jpg.image_url))
+                            AsyncImage(url: URL(string: characterData!.images.jpg.image_url)){
+                                image in image.resizable().aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.size.width - 50)
+                            }placeholder: {
+                                ProgressView()
+                            }
                             Text(characterData!.name).fontWeight(.bold).font(.title).multilineTextAlignment(.center)
                             Text(characterData!.about).multilineTextAlignment(.center)
                           

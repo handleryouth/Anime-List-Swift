@@ -10,7 +10,6 @@ import SwiftData
 
 @main
 struct Anime_ListApp: App {
-    
     var body: some Scene {
         WindowGroup {
             ContentView()

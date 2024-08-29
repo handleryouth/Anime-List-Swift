@@ -33,7 +33,6 @@ struct AnimeListView: View {
         NavigationStack {
             ScrollView{
                 if(loading) {
-                    
                     ProgressView()
                 } else {
                     if(animeList != nil) {
